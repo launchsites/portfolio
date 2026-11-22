@@ -2,6 +2,7 @@
 
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import ThemeToggle from "@/components/universal/ThemeToggle";
+import { siteData } from "@/data/site";
 
 
 export default function Navbar() {
@@ -13,7 +14,7 @@ export default function Navbar() {
   <div className="w-full bg-primary h-[clamp(4rem,6vw,6rem)] text-2xl flex text-secondary items-center justify-between gap-3 px-[clamp(1rem,5vw,6rem)]">
 
       {/*logo ish thing*/}
-      <p className="font-medium">Jamie Randell</p>
+      <a className="font-medium" href={`${siteData.domain}`}>Jamie Randell</a>
 
       {/*menu items container*/}
     <div className="gap-10 flex">
