@@ -8,7 +8,7 @@ export default function ThemeToggle() {
   const [light, toggleLight] = useState(true)
 
   return (
-    <button onClick={() => {
+    <button className="relative flex items-center cursor-pointer" onClick={() => {
 
       // toggle light / dark
       document.documentElement.classList.toggle("dark")
@@ -18,6 +18,14 @@ export default function ThemeToggle() {
       }
     }>
       {/* show the icon for the theme the button will toggle to */}
-      {light ? <Moon /> : <Sun />}</button>
+      <Moon className={`absolute transition-all duration-300 ease-in-out ${
+        light ? "opacity-100 rotate-0 scale 100"
+        : "opacity-0 scale-75 rotate-90"
+        }`} />
+      <Sun className={`absolute transition-all duration-300 ease-in-out ${
+        light ? "opacity-0 scale-75 rotate-90"
+        : "opacity-100 rotate-0 scale 100"
+        }`} />
+    </button>
   )
 }
