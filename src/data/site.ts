@@ -9,7 +9,8 @@ interface menuItem {
 interface platformIcon {
   name: string,
   icon: IconType,
-  path: string
+  path: string,
+  color?: string
 }
 
 interface siteData {
@@ -27,7 +28,7 @@ export const siteData: siteData = {
     { title: "Hire Me", path: "/contact"}
   ],
   platformIcons: [
-    { name: "Github", icon: FaGithub, path: "https://github.com/launchsites" },
-    { name: "LinkedIn", icon: FaLinkedin, path: "https://linkedin.com"}
+    { name: "Github", icon: FaGithub, path: "https://github.com/launchsites"},
+    { name: "LinkedIn", icon: FaLinkedin, path: "https://linkedin.com", color: "#0A66C2"}
   ]
 }

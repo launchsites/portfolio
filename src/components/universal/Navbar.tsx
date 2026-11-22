@@ -37,7 +37,10 @@ export default function Navbar() {
           {siteData.platformIcons.map((platformIcon) => {
             const Icon = platformIcon.icon
             return <a key={platformIcon.name} href={platformIcon.path}>
-              <Icon className="h-10 w-10 duration-400 ease-in-out text-highlight hover:text-secondary transition"></Icon>
+              <Icon
+                style={{ "--hover-color": platformIcon.color || "var(--color-secondary)" }  as React.CSSProperties}
+                className="h-10 w-10 duration-400 ease-in-out text-highlight transition hover:text-[var(--hover-color)]"
+              />
             </a>
           })}
         </div>
@@ -59,7 +62,12 @@ export default function Navbar() {
 
 
           <button className="" onClick={()=> setMenuOpen(!menuOpen)}>
-              <div className="bg-highlight rounded-2xl h-14 w-14 items-center justify-center flex">{menuOpen ? <X size={43} strokeWidth={1} /> : <Equal strokeWidth={1} size={50} />}</div>
+              <div className="bg-highlight rounded-2xl h-14 w-14 items-center justify-center flex">
+                {/*menuOpen ? <X size={43} strokeWidth={1} /> : <Equal strokeWidth={1} size={50} />*/}
+                <X size={43} strokeWidth={1} className={`absolute transition-all duration-300 ease-in-out ${menuOpen ? "opacity-100 rotate-0 scale-100" : "opacity-0 scale-75"}`} />
+                <Equal strokeWidth={1} size={50} className={`absolute transition-all duration-300 ease-in-out ${!menuOpen ? "opacity-100 rotate-0 scale-100" : "opacity-0 scale-75"}`} />
+
+              </div>
           </button>
         </div>
       </div>
