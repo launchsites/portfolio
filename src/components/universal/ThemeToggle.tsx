@@ -19,7 +19,10 @@ export default function ThemeToggle() {
 
 
     if (newLight) { localStorage.setItem("theme", "light") }
-    else {localStorage.setItem("theme", "dark")}
+    else { localStorage.setItem("theme", "dark") }
+
+    // store as cookie too for instant loading (fixing issue with saved dark mode having a flicker of white before correcting)
+    document.cookie = `theme=${newLight ? "light" : "dark"}; path=/; max-age=31536000`
   }
 
   useEffect(() => {
