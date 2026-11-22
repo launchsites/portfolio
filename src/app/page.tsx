@@ -7,6 +7,7 @@ export default function Home() {
     <div className="flex h-screen flex-col">
       <Navbar />
 
+
       <div className="bg-primary flex-1">
         <div></div>
       </div>

@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
 
-  <div>
+  <div className="sticky top-0 z-50">
     {/*desktop navbar container*/}
     <div className="hidden md:flex w-full bg-primary h-[clamp(4rem,6vw,6rem)] text-2xl text-secondary items-center justify-between gap-3 px-[clamp(1rem,5vw,6rem)]">
 
@@ -49,7 +49,7 @@ export default function Navbar() {
 
 
     {/*mobile navbar container*/}
-    <div className="h-screen bg-primary md:hidden flex flex-col">
+    <div className="bg-primary md:hidden flex flex-col">
       <div className="h-[clamp(4rem,6vw,6rem)] w-full bg-primary text-3xl text-secondary items-center justify-between gap-3 px-[clamp(1rem,5vw,6rem)] flex">
         {/*logo ish thing*/}
         <a className="font-medium" href={`${siteData.domain}`}>Jamie Randell</a>
@@ -72,9 +72,11 @@ export default function Navbar() {
         </div>
       </div>
 
-        {!menuOpen ? "" :
-          <div className="flex-1 h-full"><MobileMenu></MobileMenu></div>
-        }
+        {/*{!menuOpen ? "" :
+          <div className="flex-1 h-full transition ease-in-out duration-400"><MobileMenu></MobileMenu></div>
+        }*/}
+
+        <div className={`h-full transition ease-in-out duration-400 ${menuOpen ? "flex-1 opacity-100" : "flex-1 opacity-0"}`}><MobileMenu></MobileMenu></div>
     </div>
 
     </div>
