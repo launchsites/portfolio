@@ -1,11 +1,13 @@
 @import "tailwindcss";
 
+/* light mode colour */
 :root {
   --primary: #ffffff;
   --secondary: black;
   --highlight: #FFCF4C;
 }
 
+/* dark mode colour*/
 .dark {
     --primary: black;
     --secondary: #ffffff;
