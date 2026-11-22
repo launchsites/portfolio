@@ -1,0 +1,34 @@
+"use client"
+
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import ThemeToggle from "@/components/universal/ThemeToggle";
+
+
+export default function Navbar() {
+
+
+  return (
+
+
+  <div className="w-full bg-primary h-[clamp(4rem,6vw,6rem)] text-2xl flex text-secondary items-center justify-between gap-3 px-[clamp(1rem,5vw,6rem)]">
+    <p className="font-medium">Jamie Randell</p>
+    <div className="gap-10 flex">
+      <a className="cursor-pointer hover:text-highlight transition">About</a>
+      <a className="cursor-pointer hover:text-highlight transition">Projects</a>
+      <a className="cursor-pointer hover:text-highlight transition">Hire Me</a>
+      <ThemeToggle></ThemeToggle>
+
+    </div>
+    <div className="flex gap-4">
+      <a href="linkedin.com">
+        <FaLinkedin className="h-10 w-10 text-highlight hover:text-secondary transition"/>
+      </a>
+      <a href="github.com/launchsites">
+        <FaGithub className="h-10 w-10 text-highlight hover:text-secondary transition"/>
+      </a>
+    </div>
+    </div>
+
+  )
+
+}
