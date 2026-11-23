@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { HighlightButton, SecondaryButton } from "../elements/Buttons"
 
 export default function Hero() {
 
@@ -23,8 +24,8 @@ export default function Hero() {
         that make things <br className="sm:hidden lg:flex flex"></br><a className="text-secondary px-1 font-bold md:text-9xl text-6xl items-center border-highlight md:border-b-6 border-b-4">easier</a></h1>
 
         <div className="flex md:text-3xl text-xl md:gap-8 gap-2">
-          <div className="bg-highlight md:px-6 md:py-4 px-3 py-2 text-primary hover:text-secondary border-highlight border-2 hover:border-secondary rounded-3xl cursor-pointer transition ease-in-out duration-300">My Projects</div>
-          <div className="bg-secondary md:px-6 md:py-4 px-3 py-2 text-primary hover:text-highlight rounded-3xl cursor-pointer transition ease-in-out duration-300 border-2 border-secondary hover:border-highlight">Hire Me</div>
+          <HighlightButton>My Projects</HighlightButton>
+          <SecondaryButton>Hire Me</SecondaryButton>
         </div>
       </div>
     </div>
