@@ -4,14 +4,14 @@
 :root {
   --primary: #ffffff;
   --secondary: black;
-  --highlight: #FFCF4C;
+  --highlight: #F7C02A;
 }
 
 /* dark mode colour*/
 .dark {
-    --primary: black;
+    --primary: #1F1E1E;
     --secondary: #ffffff;
-    --highlight: #FFCF4C;
+    --highlight: #F7C02A;
 }
 
 @theme inline {
